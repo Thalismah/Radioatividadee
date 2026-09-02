@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radioatividade - Explorando o Núcleo Atômico</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <a href="#" class="logo"><span class="symbol">☢️</span><span>RADIOATIVIDADE</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#o-que-e">O que é</a></li>
+            <li><a href="#tipos">Tipos</a></li>
+            <li><a href="#historia">História</a></li>
+            <li><a href="#aplicacoes">Aplicações</a></li>
+            <li><a href="#saude">Saúde</a></li>
+            <li><a href="#curiosidades">Curiosidades</a></li>
+            <li><a href="#atomos3d">Átomos 3D</a></li>
+            <li><a href="#monte-atomo">Monte seu Átomo</a></li>
+            <li><a href="#simulacao-penetracao">Penetração</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <header class="hero" id="inicio">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="radiation-symbol">
+                <div class="ring"></div>
+                <div class="blade blade-1"></div>
+                <div class="blade blade-2"></div>
+                <div class="blade blade-3"></div>
+                <div class="core"></div>
+            </div>
+            <h1 class="fade-in">RADIOATIVIDADE</h1>
+            <p class="subtitle fade-in fade-in-1">Explorando o Coração do Átomo</p>
+            <p class="description fade-in fade-in-2">
+                Descubra o fascinante mundo da radioatividade: sua história, seus tipos,
+                suas aplicações na medicina e na indústria, e os cuidados necessários
+                para lidar com essa poderosa força da natureza.
+            </p>
+            <a href="#o-que-e" class="btn fade-in fade-in-3">Começar Exploração</a>
+        </div>
+    </header>
+
+    <!-- ===== O QUE É ===== -->
+    <section id="o-que-e">
+        <h2 class="section-title">O QUE É RADIOATIVIDADE?</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">A energia que vem de dentro do átomo</p>
+
+        <div class="content-grid">
+            <div class="content-text">
+                <p>
+                    A <strong>radioatividade</strong> é um fenômeno natural (ou artificial) pelo qual
+                    núcleos atômicos instáveis emitem espontaneamente partículas ou ondas
+                    eletromagnéticas na tentativa de se tornarem mais estáveis. Esse processo
+                    foi descoberto no final do século XIX e revolucionou a física, a química
+                    e a medicina.
+                </p>
+                <p>
+                    Quando um núcleo é instável, ele libera energia na forma de
+                    <strong>radiação</strong> — que pode ser de diferentes tipos: partículas
+                    alfa (α), partículas beta (β) ou radiação gama (γ). Cada uma possui
+                    características específicas de penetração e ionização.
+                </p>
+                <p>
+                    A radioatividade está presente em nosso dia a dia: nos alimentos que
+                    comemos, no ar que respiramos e até em nossos próprios corpos. O segredo
+                    está na <strong>dose</strong> e no <strong>tipo de exposição</strong>.
+                </p>
+            </div>
+            <div class="atom-visual">
+                <div class="orbit orbit-3"><div class="electron electron-3"></div></div>
+                <div class="orbit orbit-2"><div class="electron electron-2"></div></div>
+                <div class="orbit orbit-1"><div class="electron"></div></div>
+                <div class="nucleus"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TIPOS DE RADIAÇÃO ===== -->
+    <section id="tipos">
+        <h2 class="section-title">TIPOS DE RADIAÇÃO</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Conheça as três formas principais de emissão radioativa</p>
+
+        <div class="cards-container">
+            <div class="radiation-card alfa">
+                <span class="card-icon">🔴</span>
+                <h3>RADIAÇÃO ALFA (α)</h3>
+                <p>
+                    Composta por núcleos de hélio (2 prótons + 2 nêutrons). É pesada,
+                    carregada positivamente e tem baixo poder de penetração.
+                </p>
+                <div class="penetracao">
+                    <strong>Penetração:</strong> Poucos centímetros no ar<br>
+                    <strong>Bloqueada por:</strong> Folha de papel ou pele humana
+                </div>
+            </div>
+
+            <div class="radiation-card beta">
+                <span class="card-icon">🟡</span>
+                <h3>RADIAÇÃO BETA (β)</h3>
+                <p>
+                    Consiste em elétrons ou pósitrons de alta energia. É mais leve que a
+                    alfa e possui poder de penetração intermediário.
+                </p>
+                <div class="penetracao">
+                    <strong>Penetração:</strong> Alguns metros no ar<br>
+                    <strong>Bloqueada por:</strong> Placa de alumínio ou acrílico
+                </div>
+            </div>
+
+            <div class="radiation-card gama">
+                <span class="card-icon">🟣</span>
+                <h3>RADIAÇÃO GAMA (γ)</h3>
+                <p>
+                    Onda eletromagnética de altíssima energia. Não possui massa nem carga,
+                    sendo extremamente penetrante e perigosa.
+                </p>
+                <div class="penetracao">
+                    <strong>Penetração:</strong> Centenas de metros no ar<br>
+                    <strong>Bloqueada por:</strong> Concreto espesso ou chumbo
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HISTÓRIA ===== -->
+    <section id="historia">
+        <h2 class="section-title">HISTÓRIA DA DESCOBERTA</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Marcos importantes que mudaram nossa compreensão do átomo</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="timeline-year">1896</span>
+                <p class="timeline-text">
+                    <strong>Henri Becquerel</strong> descobre acidentalmente a radioatividade
+                    ao observar que sais de urânio emitiam raios capazes de impressionar
+                    chapas fotográficas sem exposição à luz.
+                </p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">1898</span>
+                <p class="timeline-text">
+                    <strong>Marie e Pierre Curie</strong> isolam os elementos polônio e rádio,
+                    cunhando o termo "radioatividade". Marie se torna a primeira mulher a
+                    ganhar um Prêmio Nobel e a única a ganhar em duas áreas científicas
+                    diferentes (Física e Química).
+                </p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">1899</span>
+                <p class="timeline-text">
+                    <strong>Ernest Rutherford</strong> identifica os diferentes tipos de
+                    radiação (alfa, beta e gama) e mais tarde propõe o modelo atômico
+                    com núcleo central.
+                </p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">1934</span>
+                <p class="timeline-text">
+                    <strong>Irène e Frédéric Joliot-Curie</strong> produzem a primeira
+                    radioatividade artificial, abrindo caminho para aplicações médicas
+                    e industriais.
+                </p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">1945</span>
+                <p class="timeline-text">
+                    O desenvolvimento da <strong>bomba atômica</strong> durante a Segunda
+                    Guerra Mundial demonstra o imenso poder — e o perigo — da energia
+                    liberada pela fissão nuclear.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== APLICAÇÕES ===== -->
+    <section id="aplicacoes">
+        <h2 class="section-title">APLICAÇÕES DA RADIOATIVIDADE</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Da medicina à indústria, a radiação está presente em nossas vidas</p>
+
+        <div class="apps-grid">
+            <div class="app-item">
+                <span class="app-icon">🏥</span>
+                <h4>Medicina Nuclear</h4>
+                <p>Diagnóstico por imagem (PET/CT), radioterapia para tratamento de câncer e esterilização de equipamentos.</p>
+            </div>
+            <div class="app-item">
+                <span class="app-icon">🏭</span>
+                <h4>Indústria</h4>
+                <p>Controle de qualidade, detecção de falhas em estruturas, medição de espessura e esterilização de produtos.</p>
+            </div>
+            <div class="app-item">
+                <span class="app-icon">🌾</span>
+                <h4>Agricultura</h4>
+                <p>Irradiação de alimentos para conservação, controle de pragas e melhoramento genético de culturas.</p>
+            </div>
+            <div class="app-item">
+                <span class="app-icon">🔋</span>
+                <h4>Energia Nuclear</h4>
+                <p>Geração de eletricidade em usinas nucleares, com baixa emissão de gases de efeito estufa.</p>
+            </div>
+            <div class="app-item">
+                <span class="app-icon">🔬</span>
+                <h4>Pesquisa Científica</h4>
+                <p>Datação por carbono-14, estudos de dinâmica de ecossistemas e análise de materiais arqueológicos.</p>
+            </div>
+            <div class="app-item">
+                <span class="app-icon">🧪</span>
+                <h4>Segurança</h4>
+                <p>Detectores de fumaça, escaneamento de bagagens em aeroportos e inspeção de cargas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EFEITOS NA SAÚDE ===== -->
+    <section id="saude">
+        <h2 class="section-title">EFEITOS NA SAÚDE</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">A radiação pode ser tanto uma aliada quanto um risco, dependendo da dose</p>
+
+        <div class="saude-container">
+            <div class="saude-card beneficios">
+                <h3>BENEFÍCIOS</h3>
+                <ul>
+                    <li>Tratamento de câncer por radioterapia</li>
+                    <li>Diagnóstico precoce de doenças (raio-X, tomografia)</li>
+                    <li>Esterilização de materiais médicos</li>
+                    <li>Estudos de função de órgãos (medicina nuclear)</li>
+                    <li>Tratamento de hipertireoidismo com iodo-131</li>
+                </ul>
+            </div>
+            <div class="saude-card riscos">
+                <h3>RISCOS</h3>
+                <ul>
+                    <li>Queimaduras de pele em altas exposições</li>
+                    <li>Síndrome aguda da radiação (doses muito altas)</li>
+                    <li>Aumento do risco de câncer a longo prazo</li>
+                    <li>Danos genéticos e mutações celulares</li>
+                    <li>Contaminação ambiental em acidentes nucleares</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CURIOSIDADES ===== -->
+    <section id="curiosidades">
+        <h2 class="section-title">CURIOSIDADES</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Fatos surpreendentes sobre o mundo radioativo</p>
+
+        <div class="curiosidades-list">
+            <div class="curiosidade-item">
+                <span class="curiosidade-numero">01</span>
+                <p>
+                    <strong>Você é radioativo!</strong> O corpo humano contém naturalmente
+                    potássio-40 e carbono-14, que emitem radiação constantemente. Um adulto
+                    médio emite cerca de <strong>4.000 a 5.000 decaimentos por segundo</strong>.
+                </p>
+            </div>
+            <div class="curiosidade-item">
+                <span class="curiosidade-numero">02</span>
+                <p>
+                    <strong>Bananas são radioativas.</strong> A banana contém potássio-40,
+                    um isótopo radioativo natural. A "dose equivalente a uma banana" é
+                    usada informalmente para medir exposição à radiação.
+                </p>
+            </div>
+            <div class="curiosidade-item">
+                <span class="curiosidade-numero">03</span>
+                <p>
+                    <strong>Marie Curie ainda é radioativa.</strong> Seus cadernos de
+                    anotações estão guardados em caixas revestidas de chumbo na Biblioteca
+                    Nacional da França e permanecerão radioativos por mais 1.500 anos.
+                </p>
+            </div>
+            <div class="curiosidade-item">
+                <span class="curiosidade-numero">04</span>
+                <p>
+                    <strong>A radiação cósmica nos atinge o tempo todo.</strong> Ao voar de
+                    avião, recebemos uma dose maior de radiação cósmica. Em um voo de 10
+                    horas, a exposição equivale a cerca de <strong>5 radiografias de tórax</strong>.
+                </p>
+            </div>
+            <div class="curiosidade-item">
+                <span class="curiosidade-numero">05</span>
+                <p>
+                    <strong>O granito é radioativo.</strong> Muitas rochas de granito contêm
+                    urânio, tório e potássio radioativo. Morar em casas de granito pode
+                    aumentar levemente a exposição à radiação.
+                </p>
+            </div>
+            <div class="curiosidade-item">
+                <span class="curiosidade-numero">06</span>
+                <p>
+                    <strong>Usinas nucleares não emitem gases de efeito estufa.</strong>
+                    A energia nuclear é uma das fontes mais limpas em termos de emissões
+                    de CO₂, embora gere resíduos radioativos que precisam de cuidados especiais.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ÁTOMOS 3D ===== -->
+    <section id="atomos3d">
+        <h2 class="section-title">ÁTOMOS 3D INTERATIVOS</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Explore modelos tridimensionais de diferentes elementos</p>
+        <div class="canvas-container">
+            <div class="atom-selector" id="atomSelector">
+                <button class="atom-btn active" data-atomic="1">Hidrogênio (H)</button>
+                <button class="atom-btn" data-atomic="2">Hélio (He)</button>
+                <button class="atom-btn" data-atomic="6">Carbono (C)</button>
+                <button class="atom-btn" data-atomic="8">Oxigênio (O)</button>
+                <button class="atom-btn" data-atomic="92">Urânio (U)</button>
+            </div>
+            <div class="canvas-wrapper" id="atom3dCanvas"></div>
+        </div>
+    </section>
+
+    <!-- ===== MONTE SEU ÁTOMO ===== -->
+    <section id="monte-atomo">
+        <h2 class="section-title">MONTE SEU ÁTOMO</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Ajuste prótons, nêutrons e elétrons para criar diferentes elementos</p>
+        <div class="builder-container">
+            <div class="builder-controls">
+                <label>Prótons: <span id="protonCount">6</span></label>
+                <input type="range" id="protonSlider" min="1" max="20" value="6">
+                <label>Nêutrons: <span id="neutronCount">6</span></label>
+                <input type="range" id="neutronSlider" min="0" max="30" value="6">
+                <label>Elétrons: <span id="electronCount">6</span></label>
+                <input type="range" id="electronSlider" min="1" max="20" value="6">
+                <div class="element-info" id="elementInfo">Carbono (C)</div>
+            </div>
+            <div class="builder-canvas" id="builderCanvas"></div>
+        </div>
+    </section>
+
+    <!-- ===== SIMULAÇÃO DE PENETRAÇÃO ===== -->
+    <section id="simulacao-penetracao">
+        <h2 class="section-title">COMO A RADIAÇÃO ATRAVESSA OS MATERIAIS</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Clique para selecionar o tipo de radiação e o material bloqueador</p>
+        <div class="sim-container">
+            <div class="sim-row">
+                <button class="radiation-type-btn active" data-type="alfa">Radiação Alfa</button>
+                <button class="radiation-type-btn" data-type="beta">Radiação Beta</button>
+                <button class="radiation-type-btn" data-type="gama">Radiação Gama</button>
+            </div>
+            <div class="sim-row">
+                <button class="material-btn active" data-material="papel">Papel</button>
+                <button class="material-btn" data-material="aluminio">Alumínio</button>
+                <button class="material-btn" data-material="chumbo">Chumbo</button>
+            </div>
+            <div class="sim-animation" id="simAnimation">
+                <div class="material-layer" id="materialLayer"></div>
+                <div class="beam-particle" id="beamParticle"></div>
+            </div>
+            <div class="sim-result" id="simResult">Selecione radiação e material para testar a penetração.</div>
+        </div>
+    </section>
+
+    <!-- ===== QUIZ ===== -->
+    <section id="quiz">
+        <h2 class="section-title">QUIZ: TESTE SEUS CONHECIMENTOS</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Responda às perguntas e veja sua pontuação final</p>
+        <div class="quiz-container" id="quizContainer">
+            <div class="quiz-progress" id="quizProgress">Pergunta 1 de 5</div>
+            <div class="quiz-question" id="quizQuestion"></div>
+            <div class="quiz-options" id="quizOptions"></div>
+            <div class="quiz-feedback" id="quizFeedback"></div>
+            <button id="quizNextBtn" style="display:none; padding:10px 30px; background:var(--verde-radioativo); border:none; border-radius:30px; cursor:pointer; font-weight:700; color:#000;">Próxima Pergunta</button>
+            <div class="quiz-result" id="quizResult"></div>
+            <button id="quizRestartBtn" style="display:none; padding:10px 30px; background:transparent; border:2px solid var(--verde-radioativo); color:var(--verde-radioativo); border-radius:30px; cursor:pointer; font-weight:700;">Reiniciar Quiz</button>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-symbol">☢️</div>
+        <p><strong>Projeto Educacional sobre Radioatividade</strong></p>
+        <p>Desenvolvido para fins de divulgação científica e aprendizado.</p>
+        <div class="contact-info">
+            📧 <a href="mailto:radioatividadeensina@gmail.com">radioatividadeensina@gmail.com</a> &nbsp;|&nbsp; 📱 <a href="tel:+5531993616396">31 9 9361-6396</a>
+        </div>
+        <div class="footer-links">
+            <a href="#inicio">Início</a>
+            <a href="#atomos3d">Átomos 3D</a>
+            <a href="#monte-atomo">Monte Átomo</a>
+            <a href="#simulacao-penetracao">Penetração</a>
+            <a href="#quiz">Quiz</a>
+        </div>
+        <p style="margin-top:1.5rem; font-size:0.75rem; color:#555;">&copy; 2025 — Todos os direitos reservados. Conteúdo para fins educacionais.</p>
+    </footer>
+
+    <!-- Script principal -->
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
